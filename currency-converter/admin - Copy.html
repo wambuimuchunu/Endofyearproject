@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Currency Converter - Admin Panel</h1>
+        <div id="user-info" class="login-link"></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="converter.html">Converter</a>
+            <a href="profile.html">Profile</a>
+            <a href="admin.html">Admin</a>
+        </nav>
+    </header>
+
+    <div class="container admin-container">
+        <h2>Administration Dashboard</h2>
+        
+        <div class="admin-stats">
+            <div class="stat-card admin-stat">
+                <h4>Total Users</h4>
+                <span id="total-users">0</span>
+            </div>
+            <div class="stat-card admin-stat">
+                <h4>Total Conversions</h4>
+                <span id="total-conversions-admin">0</span>
+            </div>
+            <div class="stat-card admin-stat">
+                <h4>Most Popular Pair</h4>
+                <span id="popular-pair-admin">-</span>
+            </div>
+            <div class="stat-card admin-stat">
+                <h4>Active Today</h4>
+                <span id="active-today">0</span>
+            </div>
+        </div>
+
+        <div class="admin-section">
+            <h3>User Management</h3>
+            <div class="table-container">
+                <table id="users-table">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Join Date</th>
+                            <th>Conversions</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="admin-section">
+            <h3>System Statistics</h3>
+            <div class="charts-row">
+                <div class="chart-container">
+                    <canvas id="conversionsChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="usersChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="admin-section">
+            <h3>Popular Currency Pairs</h3>
+            <div id="global-popular-pairs"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Currency Converter. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
